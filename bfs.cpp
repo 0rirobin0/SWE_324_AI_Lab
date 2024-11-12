@@ -13,60 +13,40 @@ int main()
         Vis[i] = 0;
     }
 
-//    Taking input of graph in adjacency list
- 
-    int n,m;
-    cin>>n>>m;
+    //    Taking input of graph in adjacency list
+
+    int n, m;
+    cin >> n >> m;
     for (int i = 0; i < m; i++)
     {
-      int x,y;
-      cin>>x>>y;
-      adj[x].push_back(y);
-      adj[y].push_back(x);
+        int x, y;
+        cin >> x >> y;
+        adj[x].push_back(y);
+        adj[y].push_back(x);
     }
 
     // traversing the adj list  with BFS
-    
-    queue<int>q;
+
+    queue<int> q;
     q.push(1);
     Vis[1] = true;
 
-
-
- while (!q.empty())
- {
-    int current_node = q.front();
-    q.pop();
-    cout<<current_node<<endl;
-
-    vector<int> :: iterator it;
-    for (it= adj[current_node].begin(); it <adj[current_node].end() ; it++)
+    while (!q.empty())
     {
-       if(!Vis[*it])
-       {
-        q.push(*it);
-        Vis[*it]= true;
-       }
+        int current_node = q.front();
+        q.pop();
+        cout << current_node << endl;
+
+        vector<int>::iterator it;
+        for (it = adj[current_node].begin(); it < adj[current_node].end(); it++)
+        {
+            if (!Vis[*it])
+            {
+                q.push(*it);
+                Vis[*it] = true;
+            }
+        }
     }
-    
-
- }
- 
-    
-
-   
-
-
-
-
-
-
-
-
-
-
-
-
 
     return 0;
 }
