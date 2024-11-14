@@ -1,0 +1,1 @@
+{"name":"Local: ucs","url":"c:\\Users\\rirob\\OneDrive\\Desktop\\SWE_324_AI\\ucs.cpp","tests":[{"id":1731523726442,"input":"7 8\nS A 3\nS B 1\nS C 8\nA D 3\nA E 7\nA G 15\nB G 20\nC G 5\nS G","output":""}],"interactive":false,"memoryLimit":1024,"timeLimit":3000,"srcPath":"c:\\Users\\rirob\\OneDrive\\Desktop\\SWE_324_AI\\ucs.cpp","group":"local","local":true}
